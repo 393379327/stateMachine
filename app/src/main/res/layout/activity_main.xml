@@ -1,31 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="horizontal"
         tools:context=".MainActivity">
 
-    <TextView
-            android:id="@+id/test1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@android:color/holo_red_dark"
-            android:text="test  1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-            android:id="@+id/test2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="60dp"
-            android:background="@android:color/holo_red_dark"
-            android:text="test 2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/test1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/curState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="当前状态"
+                android:textSize="15sp"
+                android:textColor="@android:color/holo_red_dark"/>
+        <TextView
+                android:id="@+id/arrive_o"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="到达招梯点" />
+
+        <TextView
+                android:id="@+id/accept_move_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="接收进梯指令成功" />
+
+        <TextView
+                android:id="@+id/arrive_aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="到达电梯点a'" />
+
+        <TextView
+                android:id="@+id/rollback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="不能到达A'，rollback" />
+
+        <TextView
+                android:id="@+id/rollback_o"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="rollback，返回到招梯点" />
+
+        <TextView
+                android:id="@+id/rollback_o_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="rollback，返回到招梯点失败,状态置为idel" />
+
+        <TextView
+                android:id="@+id/loadmap_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="自转和加载地图完成" />
+
+        <TextView
+                android:id="@+id/move_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="收到出梯指令" />
+
+        <TextView
+                android:id="@+id/move_out_timeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="出梯超时" />
+
+        <TextView
+                android:id="@+id/through_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:padding="8dp"
+                android:text="通过电梯站点a" />
+
+
+
+        <TextView
+                android:id="@+id/reset_Idel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_red_dark"
+                android:padding="8dp"
+                android:text="状态重置为Idel" />
+
+    </LinearLayout>
+</LinearLayout>
